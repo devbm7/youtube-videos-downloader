@@ -1,0 +1,6 @@
+.codegpt
+.gradio
+__pycache__/
+venv/
+downloads/
+my_downloads/
