@@ -6,7 +6,6 @@ from dataclasses import dataclass, fields # Import fields to inspect dataclass f
 import tempfile
 from pathlib import Path
 
-# Corrected import: Import check_executable from yt_dlp.utils
 from yt_dlp.utils import check_executable
 from enum import Enum
 
@@ -16,7 +15,7 @@ class DownloadFormat(Enum):
     or using the new merged download method).
     These values correspond to yt-dlp format selectors.
     """
-    MP4_BEST = "best[ext=mp4]" # May not include best audio
+    MP4_BEST = "best[ext=mp4]" # May not include audio at all
     MP4_720P = "best[height<=720][ext=mp4]" # May not include best audio
     MP4_480P = "best[height<=480][ext=mp4]" # May not include best audio
     MP3_BEST = "bestaudio[ext=m4a]/bestaudio/best" # Extracts best audio and converts to mp3
@@ -49,7 +48,7 @@ class DownloadProgress:
     eta: Optional[str] = None
     filename: Optional[str] = None # Filename during download, final filename after merging
     error_message: Optional[str] = None
-    # Added for more detailed progress during merging (yt-dlp might provide this)
+    # Added for more detailed progress during merging
     _hook_data: Optional[Dict[str, Any]] = None
 
 
