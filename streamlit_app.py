@@ -10,7 +10,7 @@ st.set_page_config(
     page_title="YouTube Downloader",
     page_icon="📹",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # Custom CSS for better styling
