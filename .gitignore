@@ -4,3 +4,4 @@ __pycache__/
 venv/
 downloads/
 my_downloads/
+logs/
